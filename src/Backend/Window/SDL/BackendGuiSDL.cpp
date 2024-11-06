@@ -209,11 +209,12 @@ namespace tgui
             case SDL_EVENT_MOUSE_MOTION:
                 return eventSDL.motion.windowID;
 
+    #if ((SDL_MAJOR_VERSION == 2) && (SDL_MINOR_VERSION > 0)) || ((SDL_MAJOR_VERSION == 2) && (SDL_MINOR_VERSION == 0) && (SDL_PATCHLEVEL >= 12))
             case SDL_EVENT_FINGER_DOWN:
             case SDL_EVENT_FINGER_UP:
             case SDL_EVENT_FINGER_MOTION:
                 return eventSDL.tfinger.windowID;
-
+    #endif
             default:
                 return 0;
         }

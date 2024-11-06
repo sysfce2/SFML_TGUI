@@ -1429,7 +1429,9 @@ TEST_CASE("[Backend events]")
 #endif
                 eventSDL.tfinger.x = 200.f / windowSize.x;
                 eventSDL.tfinger.y = 150.f / windowSize.y;
+#if (SDL_MAJOR_VERSION > 2) || ((SDL_MAJOR_VERSION == 2) && (SDL_MINOR_VERSION > 0)) || ((SDL_MAJOR_VERSION == 2) && (SDL_MINOR_VERSION == 0) && (SDL_PATCHLEVEL >= 12))
                 eventSDL.tfinger.windowID = 0;
+#endif
 
                 tgui::Event eventTGUI;
                 REQUIRE(backendGuiSDL->convertEvent(eventSDL, eventTGUI));
@@ -1636,7 +1638,9 @@ TEST_CASE("[Backend events]")
                 // Note that the resizing ignores the position of the touch ended event
                 const tgui::Vector2f windowSize = backendGuiSDL->getViewport().getSize();
                 eventSDL.type = SDL_EVENT_FINGER_DOWN;
+#if (SDL_MAJOR_VERSION > 2) || ((SDL_MAJOR_VERSION == 2) && (SDL_MINOR_VERSION > 0)) || ((SDL_MAJOR_VERSION == 2) && (SDL_MINOR_VERSION == 0) && (SDL_PATCHLEVEL >= 12))
                 eventSDL.tfinger.windowID = 0;
+#endif
 #if SDL_MAJOR_VERSION >= 3
                 eventSDL.tfinger.touchID = 1;
 #else
