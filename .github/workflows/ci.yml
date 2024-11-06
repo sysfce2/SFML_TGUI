@@ -993,7 +993,7 @@ jobs:
   #----------------------------------------
 
   ios-sfml-graphics:
-    runs-on: macos-12
+    runs-on: macos-15
     env:
       SFML_VERSION: 2.6.x  # At least 2.6.2 is required
     steps:
