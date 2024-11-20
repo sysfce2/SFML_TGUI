@@ -576,7 +576,9 @@ TEST_CASE("[Widget]")
         REQUIRE(parent->getWidgets().size() == 1);
         parent->loadWidgetsFromFile("WidgetFileClickableWidget1.txt");
         REQUIRE(parent->getWidgets().size() == 1);
+        std::streambuf *oldbuf = std::cerr.rdbuf(nullptr); // Ignore warning about duplicate name being used
         parent->loadWidgetsFromFile("WidgetFileClickableWidget1.txt", false);
+        std::cerr.rdbuf(oldbuf);
         REQUIRE(parent->getWidgets().size() == 2);
     }
 
