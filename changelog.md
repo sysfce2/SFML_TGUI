@@ -1,3 +1,9 @@
+TGUI 1.7  (TBD)
+---------------
+
+- New widgets: GrowHorizontalLayout and GrowVerticalLayout
+
+
 TGUI 1.6.1  (8 October 2024)
 ----------------------------
 
