@@ -243,7 +243,8 @@ namespace tgui
         }
         m_textures[scaledTextSize] = texture;
 
-        textureVersion = ++m_textureVersions[scaledTextSize];
+        textureVersion = ++m_lastTextureVersion;
+        m_textureVersions[scaledTextSize] = textureVersion;
         return texture;
     }
 
