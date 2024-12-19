@@ -90,7 +90,7 @@ TGUI_MODULE_EXPORT namespace tgui
         ///
         /// @return The new horizontal layout
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        TGUI_NODISCARD static GrowHorizontalLayout::Ptr create(const Layout& width = {RelativeValue(1)});
+        TGUI_NODISCARD static GrowHorizontalLayout::Ptr create(const Layout& height = {RelativeValue(1)});
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// @brief Makes a copy of another layout

@@ -94,10 +94,10 @@ namespace tgui
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    GrowHorizontalLayout::Ptr GrowHorizontalLayout::create(const Layout& width)
+    GrowHorizontalLayout::Ptr GrowHorizontalLayout::create(const Layout& height)
     {
         auto layout = std::make_shared<GrowHorizontalLayout>();
-        layout->setWidth(width);
+        layout->setHeight(height);
         return layout;
     }
 
