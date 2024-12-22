@@ -1,5 +1,5 @@
-TGUI 1.7  (TBD)
----------------
+TGUI 1.7  (22 December 2024)
+----------------------------
 
 - New widgets: GrowHorizontalLayout and GrowVerticalLayout
 - Fixed some issues with font scale in SFML font backend
