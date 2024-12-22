@@ -895,7 +895,7 @@ jobs:
   android-sdl:
     runs-on: ubuntu-latest
     env:
-      SDL_VERSION: 2.30.7  # Not released yet, so code below downloads latest version and ignores this for now
+      SDL_VERSION: 2.30.10
       SDL_TTF_VERSION: 2.22.0
     steps:
       - name: Checkout TGUI
@@ -903,12 +903,11 @@ jobs:
         with:
           path: TGUI
 
-      # TODO (once SDL 2.30.7 is released: wget -nv -O- "https://github.com/libsdl-org/SDL/archive/refs/tags/release-$SDL_VERSION.tar.gz" | tar --strip-components=1 -xz -C SDL2
       - name: Download SDL
         run: |
           mkdir SDL2
           mkdir SDL2_ttf
-          wget -nv -O- "https://github.com/libsdl-org/SDL/archive/refs/heads/release-2.30.x.tar.gz" | tar --strip-components=1 -xz -C SDL2
+          wget -nv -O- "https://github.com/libsdl-org/SDL/archive/refs/tags/release-$SDL_VERSION.tar.gz" | tar --strip-components=1 -xz -C SDL2
           wget -nv -O- "https://github.com/libsdl-org/SDL_ttf/releases/download/release-$SDL_TTF_VERSION/SDL2_ttf-$SDL_TTF_VERSION.tar.gz" | tar --strip-components=1 -xz -C SDL2_ttf
 
       - name: Build SDL_RENDERER project
@@ -995,7 +994,7 @@ jobs:
   ios-sfml-graphics:
     runs-on: macos-15
     env:
-      SFML_VERSION: 2.6.x  # At least 2.6.2 is required
+      SFML_VERSION: 2.6.2
     steps:
       - name: Checkout TGUI
         uses: actions/checkout@v4
@@ -1010,7 +1009,7 @@ jobs:
       - name: Build SFML
         if: steps.cache-sfml.outputs.cache-hit != 'true'
         run: |
-          wget -nv https://github.com/SFML/SFML/archive/refs/heads/${SFML_VERSION}.zip
+          wget -nv https://github.com/SFML/SFML/archive/refs/tags/${SFML_VERSION}.zip
           unzip ${SFML_VERSION}.zip
           cmake -GXcode -DCMAKE_INSTALL_PREFIX=SFML_INSTALL -DCMAKE_SYSTEM_NAME=iOS -DCMAKE_OSX_ARCHITECTURES=arm64 -DBUILD_SHARED_LIBS=OFF -DSFML_BUILD_AUDIO=OFF -DSFML_BUILD_NETWORK=OFF -S SFML-$SFML_VERSION -B SFML-build
           cmake --build SFML-build --config Debug --target install -- CODE_SIGNING_ALLOWED=NO
