@@ -152,7 +152,7 @@
         if (renderer) \
             setProperty(tgui::String(#NAME), {std::move(renderer)}); \
         else \
-            setProperty(tgui::String(#NAME), {RendererData::create()}); \
+            setProperty(tgui::String(#NAME), {tgui::RendererData::create()}); \
     }
 
 #define TGUI_RENDERER_PROPERTY_RENDERER(CLASS, NAME, RENDERER) \
