@@ -413,7 +413,11 @@ namespace tgui
             return {0, 0};
 
         // Temporarily set the underline style
+#if TGUI_USE_SDL3
+        const TTF_FontStyleFlags oldFontStyle = TTF_GetFontStyle(font);
+#else
         const int oldFontStyle = TTF_GetFontStyle(font);
+#endif
         TTF_SetFontStyle(font, TTF_STYLE_UNDERLINE);
 
         int offset = 0;
