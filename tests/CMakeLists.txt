@@ -66,6 +66,7 @@ set(TEST_SOURCES
     Widgets/ClickableWidget.cpp
     Widgets/ColorPicker.cpp
     Widgets/ComboBox.cpp
+    Widgets/ContextMenu.cpp
     Widgets/EditBox.cpp
     Widgets/EditBoxSlider.cpp
     Widgets/FileDialog.cpp

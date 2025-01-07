@@ -58,6 +58,12 @@ ComboBox {
     Padding           = (3, 3, 3, 3);
 }
 
+ContextMenu {
+    TextureItemBackground         = "Black.png" Part(78, 105, 8, 4) Middle(2, 0, 4, 2) NoSmooth;
+    TextureSelectedItemBackground = "Black.png" Part(113, 238, 8, 6) Middle(2, 2) NoSmooth;
+    DistanceToSide                = 5;
+}
+
 EditBox {
     Texture        = "Black.png" Part(1, 154, 60, 40) Middle(15, 0) Smooth;
     TextureHover   = "Black.png" Part(63, 196, 60, 40) Middle(15, 0) Smooth;

@@ -35,6 +35,7 @@
 #include <TGUI/Widgets/ClickableWidget.hpp>
 #include <TGUI/Widgets/ColorPicker.hpp>
 #include <TGUI/Widgets/ComboBox.hpp>
+#include <TGUI/Widgets/ContextMenu.hpp>
 #include <TGUI/Widgets/EditBox.hpp>
 #include <TGUI/Widgets/EditBoxSlider.hpp>
 #include <TGUI/Widgets/FileDialog.hpp>

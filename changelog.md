@@ -1,3 +1,9 @@
+TGUI 1.8  (TBD)
+---------------
+
+- New widget: ContextMenu
+
+
 TGUI 1.7  (22 December 2024)
 ----------------------------
 

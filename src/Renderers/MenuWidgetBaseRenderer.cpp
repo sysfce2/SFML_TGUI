@@ -22,14 +22,27 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#include <TGUI/Renderers/MenuBarRenderer.hpp>
+#include <TGUI/Renderers/MenuWidgetBaseRenderer.hpp>
 #include <TGUI/RendererDefines.hpp>
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 namespace tgui
 {
-    TGUI_RENDERER_PROPERTY_TEXTURE(MenuBarRenderer, TextureBackground)
+    TGUI_RENDERER_PROPERTY_COLOR(MenuWidgetBaseRenderer, BackgroundColor, Color::White)
+    TGUI_RENDERER_PROPERTY_COLOR(MenuWidgetBaseRenderer, SelectedBackgroundColor, Color(0, 110, 255))
+    TGUI_RENDERER_PROPERTY_COLOR(MenuWidgetBaseRenderer, TextColor, Color::Black)
+    TGUI_RENDERER_PROPERTY_COLOR(MenuWidgetBaseRenderer, SelectedTextColor, Color::White)
+    TGUI_RENDERER_PROPERTY_COLOR(MenuWidgetBaseRenderer, TextColorDisabled, {})
+    TGUI_RENDERER_PROPERTY_COLOR(MenuWidgetBaseRenderer, SeparatorColor, Color::Black)
+
+    TGUI_RENDERER_PROPERTY_TEXTURE(MenuWidgetBaseRenderer, TextureItemBackground)
+    TGUI_RENDERER_PROPERTY_TEXTURE(MenuWidgetBaseRenderer, TextureSelectedItemBackground)
+
+    TGUI_RENDERER_PROPERTY_NUMBER(MenuWidgetBaseRenderer, DistanceToSide, 0)
+    TGUI_RENDERER_PROPERTY_NUMBER(MenuWidgetBaseRenderer, SeparatorThickness, 1)
+    TGUI_RENDERER_PROPERTY_NUMBER(MenuWidgetBaseRenderer, SeparatorVerticalPadding, 0)
+    TGUI_RENDERER_PROPERTY_NUMBER(MenuWidgetBaseRenderer, SeparatorSidePadding, 0)
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

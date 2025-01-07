@@ -53,6 +53,10 @@ ComboBox {
     Borders      = (2, 2, 2, 2);
 }
 
+ContextMenu {
+    DistanceToSide = 5;
+}
+
 EditBox {
     Texture    = "BabyBlue.png" Part(103, 40, 72, 48) Middle(24, 0, 24, 48) Smooth;
     CaretColor = rgb(145, 180, 190);

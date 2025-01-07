@@ -39,6 +39,7 @@ namespace tgui
         {"ClickableWidget", std::make_shared<ClickableWidget>},
         {"ColorPicker", std::make_shared<ColorPicker>},
         {"ComboBox", std::make_shared<ComboBox>},
+        {"ContextMenu", std::make_shared<ContextMenu>},
         {"EditBox", std::make_shared<EditBox>},
         {"EditBoxSlider", std::make_shared<EditBoxSlider>},
         {"FileDialog", std::make_shared<FileDialog>},

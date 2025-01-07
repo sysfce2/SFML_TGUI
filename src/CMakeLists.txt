@@ -77,6 +77,7 @@ set(TGUI_SRC
     Renderers/ListBoxRenderer.cpp
     Renderers/ListViewRenderer.cpp
     Renderers/MenuBarRenderer.cpp
+    Renderers/MenuWidgetBaseRenderer.cpp
     Renderers/MessageBoxRenderer.cpp
     Renderers/PanelRenderer.cpp
     Renderers/PanelListBoxRenderer.cpp
@@ -106,6 +107,7 @@ set(TGUI_SRC
     Widgets/ClickableWidget.cpp
     Widgets/ColorPicker.cpp
     Widgets/ComboBox.cpp
+    Widgets/ContextMenu.cpp
     Widgets/EditBox.cpp
     Widgets/EditBoxSlider.cpp
     Widgets/FileDialog.cpp
@@ -120,6 +122,7 @@ set(TGUI_SRC
     Widgets/ListBox.cpp
     Widgets/ListView.cpp
     Widgets/MenuBar.cpp
+    Widgets/MenuWidgetBase.cpp
     Widgets/MessageBox.cpp
     Widgets/Panel.cpp
     Widgets/PanelListBox.cpp
@@ -264,6 +267,7 @@ set(TGUI_HEADERS
     "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/ChildWindowRenderer.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/ColorPickerRenderer.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/ComboBoxRenderer.hpp"
+    "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/ContextMenuRenderer.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/EditBoxRenderer.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/FileDialogRenderer.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/GroupRenderer.hpp"
@@ -272,6 +276,7 @@ set(TGUI_HEADERS
     "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/ListBoxRenderer.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/ListViewRenderer.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/MenuBarRenderer.hpp"
+    "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/MenuWidgetBaseRenderer.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/MessageBoxRenderer.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/PanelListBoxRenderer.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Renderers/PanelRenderer.hpp"
@@ -302,6 +307,7 @@ set(TGUI_HEADERS
     "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/ClickableWidget.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/ColorPicker.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/ComboBox.hpp"
+    "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/ContextMenu.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/EditBox.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/EditBoxSlider.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/FileDialog.hpp"
@@ -316,6 +322,7 @@ set(TGUI_HEADERS
     "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/ListBox.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/ListView.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/MenuBar.hpp"
+    "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/MenuWidgetBase.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/MessageBox.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/Panel.hpp"
     "${PROJECT_SOURCE_DIR}/include/TGUI/Widgets/PanelListBox.hpp"

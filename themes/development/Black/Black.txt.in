@@ -58,6 +58,12 @@ ComboBox {
     Padding           = (3, 3, 3, 3);
 }
 
+ContextMenu {
+    TextureItemBackground         = ${MenuBarItem} Middle(2, 0, 4, 2) NoSmooth;
+    TextureSelectedItemBackground = ${MenuBarItemSelected} Middle(2, 2) NoSmooth;
+    DistanceToSide                = 5;
+}
+
 EditBox {
     Texture        = ${EditBoxBackground} Middle(15, 0) Smooth;
     TextureHover   = ${EditBoxBackgroundHover} Middle(15, 0) Smooth;
